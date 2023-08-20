@@ -111,7 +111,7 @@ def _process_inputs(inputs)
     vx -= 1 if key_held.a
     vx += 1 if key_held.d
 
-    unless vy == 0 || vx == 0
+    if !(vy == 0 || vx == 0)
       sqrt2 = 2**0.5
       vy /= sqrt2
       vx /= sqrt2
@@ -212,7 +212,7 @@ def _calc(_args)
   asdx = @aim_sight.dx = @aim_sight.x2 - @aim_sight.x
   asdy = @aim_sight.dy = @aim_sight.y2 - @aim_sight.y
   asa = @aim_sight.angle = math.atan2(asdy, asdx)
-  asd2 = @aim_sight.distance2 = asdx * asdx + asdy * asdy
+  @aim_sight.distance2 = asdx * asdx + asdy * asdy
 
   while (rb = @resolvable_player_bullets.pop)
     @player_bullets << rb.merge(
