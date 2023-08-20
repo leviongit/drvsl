@@ -1,0 +1,17 @@
+[project]
+name = "vs"
+title = "vs"
+version = "0.1.0"
+authors = ["leviondiscord"]
+icon = "metadata/icon.png"
+compile_ruby = false
+
+[dragonruby]
+version = "5.5"
+edition = "pro"
+
+[dependencies]
+
+[itch]
+url = ""
+username = ""
